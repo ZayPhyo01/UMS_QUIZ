@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/whiteColor"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consUppderViewGroup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:transitionName="cv"
+
+            app:layout_constraintBottom_toBottomOf="@id/divider"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <ImageView
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:src="@drawable/pkcd"
+                android:id="@+id/imvLogo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="300dp"
+                android:layout_margin="@dimen/margin_small"
+                android:textColor="@color/green"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textSize="@dimen/text_regular"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imvLogo"
+                app:layout_constraintVertical_bias="0.099999" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:visibility="invisible"
+            app:layout_constraintVertical_bias="0.6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvChoiceViewGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_3"
+            android:layout_marginRight="@dimen/margin_medium_3"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            android:background="@drawable/whiteColor"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/consUppderViewGroup"
+            app:layout_constraintVertical_bias="0.13999999">
+
+            <RelativeLayout
+                android:id="@+id/lnChoice"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin_medium_3"
+                android:paddingTop="@dimen/margin_medium_3"
+                android:paddingRight="@dimen/margin_medium_3"
+                android:paddingBottom="@dimen/margin_medium_3"
+                android:weightSum="2">
+
+
+
+                    <TextView
+                        android:id="@+id/tvFirstAnswer"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_gravity="center"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:text="မှန်"
+                        android:gravity="center"
+                        android:background="@drawable/right_cirlce_button"
+                        android:textColor="#007d00"
+                        android:textSize="@dimen/text_regular_2x" />
+
+
+
+
+                    <TextView
+                        android:id="@+id/tvSecondAnswer"
+                        android:layout_width="128dp"
+                        android:layout_height="128dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/wrong_circle_button"
+                        android:paddingBottom="@dimen/margin_small"
+                        android:text="မှာ:"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:textColor="#FF0000"
+                        android:textSize="@dimen/text_regular_2x" />
+
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
+            android:layout_width="120dp"
+            android:layout_height="42dp"
+            android:textColor="@drawable/whiteColor"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginBottom="@dimen/margin_xlarge"
+            android:background="@drawable/round_button"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvChoiceViewGroup" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:visibility="gone"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Developed by Zay Phyo"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+             />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

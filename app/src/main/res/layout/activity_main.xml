@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:paddingTop="@dimen/margin_xxxxlarge"
+    android:paddingBottom="@dimen/margin_xxxxlarge"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="Quiz"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:layout_marginBottom="@dimen/margin_xxlarge"
+        android:background="@drawable/round_green_btn"
+        android:id="@+id/btnQuiz"
+        android:textColor="@drawable/whiteColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+
+        android:textColor="@drawable/whiteColor"
+        android:background="@drawable/round_green_btn"
+        android:text="Knowledge Sharing"
+        android:id="@+id/btnSharing"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+
+        android:layout_marginTop="@dimen/margin_xxlarge"
+        android:layout_marginRight="@dimen/margin_xxlarge"
+        android:layout_marginLeft="@dimen/margin_xxlarge"
+        android:background="@drawable/round_green_btn"
+        android:textColor="@drawable/whiteColor"
+        android:id="@+id/btnResearch"
+        android:text="Research"/>
+
+
+</LinearLayout>

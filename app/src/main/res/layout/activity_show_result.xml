@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:id="@+id/imvLogo"
+        android:src="@drawable/pkcd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Congratulations"
+        android:textStyle="bold"
+        android:textColor="@color/green"
+        android:textSize="@dimen/text_regular_3x"
+        app:layout_constraintTop_toBottomOf="@id/imvLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/con"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/margin_xxxxlarge"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="You got 10 mark"
+        app:layout_constraintTop_toBottomOf="@id/con"
+        android:id="@+id/tvResult"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:textSize="@dimen/text_regular_2x"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBack"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:background="@drawable/round_button"
+        android:textColor="@drawable/whiteColor"
+        android:layout_marginTop="@dimen/margin_medium_3"
+        android:layout_marginBottom="@dimen/margin_xlarge"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvChoiceViewGroup" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
